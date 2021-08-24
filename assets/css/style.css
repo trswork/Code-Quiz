@@ -18,3 +18,7 @@ h1 {
 .btn {
     align-items: center;
 }
+
+.btn:hover {
+    box-shadow: 0 2px var(--grey);
+}
