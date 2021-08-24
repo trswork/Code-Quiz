@@ -12,9 +12,23 @@ button.addEventListener ("click", function() {
 });
 
 //timer
-var seconds = document.getElementById("countdown").textContent;
-var countdown = setInterval(function() {
-    seconds--;
-    document.getElementById("countdown").textContent = seconds;
-    if (seconds <= 0) clearInterval(countdown);
-}, 1000);
+function startTimer(duration, display) {
+    var timer = duration, seconds;
+    setInterval(function () {
+        seconds = parseInt(timer % 60, 10);
+
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+
+window.onload = function () {
+    var oneMinutes = 60 * 1,
+        display = document.querySelector('#time');
+    startTimer(oneMinutes, display);
+};
