@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script defer src="./assets/js/script.js"></script>
     <title>Coding Quiz</title>
 </head>
 
@@ -13,12 +14,23 @@
 </header>
 
 <body>
-    <span id="countdown">60</span> second<span id="plural">s</span>
     <div class="container">
-    <p>Answer the following questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds. </p>
-    <button type="button" class="btn btn-primary">Start Quiz</button>
+        <div id="question-container">
+            <div id="question">Question</div>
+            <div id="answer-buttons" class="btn-grid">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="start-btn" class="start-btn btn">Start</button>
+            <button id="next-btn" class="next-btn btn hide">Next</button>
+        </div>
     </div>
     </div>
-    <script src="./assets/js/script.js"></script>
+
 </body>
 </html>
