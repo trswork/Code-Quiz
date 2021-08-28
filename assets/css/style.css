@@ -1,3 +1,12 @@
+/* importing google fonts */
+@import url('https://fonts.googlapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: offscreenBuffering;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
 header {
  text-align: center;
 }
@@ -15,10 +24,19 @@ h1 {
     text-align: center;
 }
 
-.btn {
+.start_btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     align-items: center;
 }
 
+/* start quiz button styling */
+.start_btn button{
+    font-size: 25px;
+}
+
 .btn:hover {
-    box-shadow: 0 2px var(--grey);
+    box-shadow: 0 2px var(--grey);-
 }
