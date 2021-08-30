@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
     <script defer src="./assets/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>Coding Quiz</title>
 </head>
 
 <header>
     <h1>Coding Quiz Challenge</h1>
-    <div style="font-weight: bold;" id="quiz-timer-right"></div>
 </header>
 
 <body>
@@ -21,6 +21,10 @@
         </div>
         <div id="question-container" class="hide">
           <div id="question">Question</div>
+          <div class="header">
+           <div class="scoreBox">Score : <span>0</span></div>
+                <div class="timerBox">Time Left : <span></span></div>
+          </div>
           <div id="answer-buttons" class="btn-grid">
             <button class="btn">Answer 1</button>
             <button class="btn">Answer 2</button>
@@ -31,7 +35,24 @@
         <div class="controls">
           <button id="start-btn" class="start-btn btn">Start</button>
           <button id="next-btn" class="next-btn btn hide">Next</button>
+          <button id="showresults-btn" class="showresults-btn btn hide">Show Result</button>
         </div>
-      </div>
+        </div>
+
+        <div id="resultScreen" class="hide">
+        <div class="title">
+              Coding Quiz Results
+        </div>
+        <div class="resultBox" class="hide">
+            <label>Questions : </label>
+            <span id="totalQuestions">06</span>
+            <label>Attempt : </label>
+            <span id="attempts">1</span>
+            <label>Correct : </label>
+            <span id="correctAnswers">1</span>
+            <label>Wrong : </label>
+            <span id="wrongAnswers">1</span>
+        </div> 
+        </div>  
 </body>
 </html>
